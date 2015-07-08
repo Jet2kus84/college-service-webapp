@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="collegeService.css">
+<title>Add/Remove</title>
+</head>
+<body id="addRemove">
+	<h1 align="Center">Add/Remove Course Data</h1>
+	
+	<p>
+		If you would like to add any new courses to the catalog, you are able to do<br>
+		so below. Any course entered that currently exist will not be added again to the<br>
+		course catalog. You are also able to remove courses from the course catalog on this<br>
+		page. <br><br> 
+		
+		When adding a course to the course category you will only need provide the course name,<br>
+		number, category, and description. When removing a course, you will need to provide the <br>
+		course Identifier. The course identifier consist of the course category and number.
+	</p>
+	<!-- 
+		Course Schema
+		
+		courseName
+		courseNumber
+		courseDescription
+		courseCategory
+	 -->
+	<!-- Get Course data  -->
+	<fieldset>
+	<legend><b><font size="5">Add Course</font></b></legend>
+	<form action="AddCourse" method="POST">
+		<table border="1">
+			<tr>
+				<td><b>Course Name:</b> </td>
+				<td><input type="text" name="courseName"></td>
+			</tr>
+			<tr>
+				<td><b>Course Number:</b></td> 
+				<td><input type="text" name="courseNumber"></td>
+			</tr>
+			<tr>
+				<td><b>Course Category (i.e Math)</b>: </td> 
+				<td><input type="text" name="courseCategory"> </td>
+			</tr>
+		</table>
+		<p>
+		<!-- display text area -->
+			<b>Course Description:</b><br>
+			<textarea name="courseDescription" rows="10" cols="80" wrap="hard"
+				maxlength="300" placeholder="Describe what this course will cover">
+			</textarea>
+		</p>
+		<input type="submit" value="Add">
+		<input type="reset" value="Reset">
+	</form>
+	</fieldset>
+	
+	<br> <!-- space out the field sets a bit -->
+	
+	<!-- Allow user to remove course from catalog -->
+	<fieldset>
+	<legend><b><font size="5">Remove Course</font></b></legend>
+	<form action="RemoveCourse" method="POST">
+		<label>
+			<b>Provide Course Identifier:</b>
+			<input type="text" name="course_id">
+		</label>
+		<input type="submit" value="Remove">
+		<input type="reset" value="Reset">
+	</form>
+	</fieldset>
+	
+	<br><br>
+	
+	<!-- send back to index page -->
+	<form action="index.html">
+		<div id="centerButton">
+   		 	<input id="button" type="submit" value="Home"
+   		 	style="background-color:#c00; color:#fff;">
+   		 </div>
+	</form>
+	
+	<!-- Show the courses that are currently listed in the database -->
+	<form action="ShowCatalog.jsp" target="blank">
+	<div id="centerButton">
+		<input id="button" type="submit" value="Show Catalog" 
+		style="background-color:#c00; color:#fff;">
+		<input type="hidden" name="page" value="admin_add_remove.html">
+	</div>
+        </form>
+	<!-- add student record -->
+	<form action="add_student_record.html">
+		<div id="centerButton">
+   		 	<input id="button" type="submit" value="Add Student"
+   		 	style="background-color:#c00; color:#fff;">
+   		 </div>
+	</form>
+	
+</body>
+</html>
