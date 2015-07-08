@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="collegeService.css">
+<title>Add Student</title>
+</head>
+<body>
+	<h3><b>Add Student Record</b></h3>
+	<form action="AddStudent" method="POST">
+		<table border="1">
+			<tr>
+				<td><b>Student First Name:</b> </td>
+				<td><input type="text" name="first_name"></td>
+			</tr>
+			<tr>
+				<td><b>Student Last Name:</b></td> 
+				<td><input type="text" name="last_name"></td>
+			</tr>
+			<tr>
+				<td><b>Student Middle Initial:</b></td> 
+				<td><input type="text" name="middle_initial"></td>
+			</tr>
+			<tr>
+				<td><b>Student Date Of Birth (03/15/1980)</b>: </td> 
+				<td><input type="text" name="date_of_birth"> </td>
+			</tr>
+			<tr>
+				<td><b>Student Academic Year (e.i Freshman, Sophomore, etc):</b></td> 
+				<td><input type="text" name="academic_year"></td>
+			</tr>
+		</table>
+		
+		<input type="submit" value="Add">
+		<input type="reset" value="Reset">
+	</form>
+	<br>
+	<form action="index.html">
+   		 <input id="button" type="submit" value="Back"
+   		 style="background-color:#c00; color:#fff;">
+	</form>
+	
+	<!-- Show the courses that are currently listed in the database -->
+	<form action="ShowCatalog.jsp" target="blank">
+		<input id="button" type="submit" value="Show Catalog" 
+		style="background-color:#c00; color:#fff;">
+		<input type="hidden" name="page" value="add_student_record.html">
+	</form>
+</body>
+</html>

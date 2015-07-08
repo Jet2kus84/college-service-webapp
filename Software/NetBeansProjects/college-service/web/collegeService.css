@@ -1,0 +1,76 @@
+@CHARSET "UTF-8";
+
+#button {
+	width: 8em;
+	height: 2em;
+}
+
+#centerButton {
+	text-align: center;
+}
+
+#addRemove {
+	background-color: #99FFFF ; 
+}
+
+#login {
+	border: solid 2px;  
+   float:left;
+}
+
+/***************Customization data for the INDEX page******************/
+h1.header {
+    color: #0099ff;
+    text-align: center;
+}
+
+h2.header {
+    color: white;
+    text-align: left;
+}
+
+#options {
+    color: White;
+}
+
+body.indexPage {
+    background-color: Black;
+}
+
+p.introText {
+    text-align: left;
+    color: #cccccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/***********************************************************************/
+
+/*Code for just playing around*/
+#animation {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: myfirst 5s infinite; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: normal; /* Chrome, Safari, Opera */
+    /*animation: myfirst 5s infinite;
+    animation-direction: alternate;*/
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {background: red; left: 0px; top: 0px;}
+    25%  {background: yellow; left: 200px; top: 0px;}
+    50%  {background: blue; left: 200px; top: 200px;}
+    75%  {background: green; left: 0px; top: 200px;}
+    100% {background: red; left: 0px; top: 0px;}
+    
+    
+}
+
+/*@keyframes myfirst {
+    0%   {background: red; left: 0px; top: 0px;}
+    25%  {background: yellow; left: 200px; top: 0px;}
+    50%  {background: blue; left: 200px; top: 200px;}
+    75%  {background: green; left: 0px; top: 200px;}
+    100% {background: red; left: 0px; top: 0px;}
+}*/
